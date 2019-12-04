@@ -15,12 +15,14 @@
 
 typedef struct {
 	uint32_t n_verts; uint32_t n_tris; uint32_t n_edges;
-	vert_colored (*verts)[];
-	tri_colored (*tris)[];
+	vert_colored *verts;
+	tri_colored *tris;
 } off_file;
 
-_Bool save_off(off_file *mesh, char *path);
+bool save_off(off_file *mesh, char *path);
 
-off_file *open_off(char *path);
+off_file *load_off(char *path);
+
+void print_off(off_file *off);
 
 #endif

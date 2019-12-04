@@ -16,6 +16,8 @@
 #include <CL/cl.h>
 #endif
 
-#include "geom.h"
+void list_ocl();
+
+void add_test(uint32_t platform, uint32_t dev, uint32_t size);
 
 #endif
